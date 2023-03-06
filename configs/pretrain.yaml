@@ -1,0 +1,17 @@
+incidentonem_train: ['data/incidentonm_train.json']
+incidentonem_val: ['data/incidentonm_val.json']
+
+
+batch_size_train: 512
+batch_size_test: 512
+
+optimizer: {opt: adamW, lr: 1e-4, weight_decay: 0.02}
+schedular: {sched: cosine, lr: 1e-4, epochs: 2, min_lr: 1e-5, decay_rate: 1, warmup_lr: 1e-5, warmup_epochs: 3, cooldown_epochs: 0}
+
+
+image_res: 224
+hidden_size: 512
+
+mae:
+  drop_path: 0.1
+  global_pool: True

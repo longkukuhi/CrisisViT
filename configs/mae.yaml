@@ -1,0 +1,26 @@
+train_file: [  './data/both_one_pos_train.json',
+            ]
+val_file: [  './data/both_one_pos_val.json',
+            ]
+
+# each train_file (json) contains a python list where each item is {'image': img_path, 'caption': text or list_of_text }  
+
+
+batch_size_train: 512
+batch_size_test: 512
+
+distill: False
+image_res: 224
+vision_width: 768
+embed_dim: 256
+hidden_size: 768
+
+optimizer: {opt: adamW, lr: 1e-4, weight_decay: 0.02}
+schedular: {sched: cosine, lr: 1e-4, epochs: 10, min_lr: 1e-5, decay_rate: 1, warmup_lr: 1e-4, warmup_epochs: 10, cooldown_epochs: 0}
+
+
+
+
+
+
+
